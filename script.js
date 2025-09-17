@@ -9,11 +9,11 @@ var index = 1;
 function Update_Notes() {
     notes.forEach((note, index) => {
         let exists = Array.from(notes_place.children).some(
-            p => p.innerText === index.toString() + "." + " " + note
+            p => p.innerText === note
         );
         if (!exists) {
             var p = document.createElement('p');
-            p.innerText = index.toString() + "." + " " + note;
+            p.innerText = note;
             notes_place.appendChild(p);
         }
     });
@@ -45,5 +45,6 @@ removeBtn.addEventListener('click', () => {
     Update_Notes(); // نفضي العرض
 
 });
+
 
 
