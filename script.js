@@ -7,7 +7,6 @@ var removeBtn = document.getElementById("rem")
 var index = 1;
 
 function Update_Notes() {
-    notes_place.innerHTML = "";
     notes.forEach((note, index) => {
         let exists = Array.from(notes_place.children).some(
             p => p.innerText === index.toString() + "." + " " + note
@@ -46,3 +45,4 @@ removeBtn.addEventListener('click', () => {
     Update_Notes(); // نفضي العرض
 
 });
+
