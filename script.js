@@ -10,7 +10,7 @@ function Update_Notes() {
     notes_place.innerHTML = "";
     notes.forEach((note, index) => {
         let exists = Array.from(notes_place.children).some(
-            p => p.innerText === index.toString() + " " + note
+            p => p.innerText === index.toString() + "." + " " + note
         );
         if (!exists) {
             var p = document.createElement('p');
@@ -44,4 +44,5 @@ removeBtn.addEventListener('click', () => {
     notes = []; // نفرغ المصفوفة
     localStorage.removeItem('notes'); // نمسح من التخزين
     Update_Notes(); // نفضي العرض
+
 });
