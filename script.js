@@ -13,7 +13,7 @@ function Update_Notes() {
         );
         if (!exists) {
             var p = document.createElement('p');
-            p.innerText = note;
+            p.innerText = index.toString(), '.', ' ',  note;
             notes_place.appendChild(p);
         }
     });
@@ -45,6 +45,7 @@ removeBtn.addEventListener('click', () => {
     Update_Notes(); // نفضي العرض
 
 });
+
 
 
 
