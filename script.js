@@ -4,7 +4,6 @@ var submit = document.getElementById("sub"); // Submit button in index.html
 var notes_place = document.getElementById("notess"); // The output to show notes
 var notes = JSON.parse(localStorage.getItem("notes")) || []; // store notes in local storage (on computer)
 var removeBtn = document.getElementById("rem")
-var index = 1;
 
 function Update_Notes() {
     notes.forEach((note, index) => {
@@ -45,6 +44,7 @@ removeBtn.addEventListener('click', () => {
     Update_Notes(); // نفضي العرض
 
 });
+
 
 
 
